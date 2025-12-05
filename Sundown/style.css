@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  /* background-color: black;
+  color: white;
+  line-height: 1.6; */
+}
+
+:root {
+  --background-color: #efeae3;
+  --text-color: black;
+  --text-color2: #fff;
+  --bg-color: black;
+
+  --nav-color: rgb(255, 68, 0);
+  --nav-color2: black;
+
+  --padding: 2vw 3vw;
+  --padding-xs: 0.5vw 0.9vw;
+}
+
+/* page1 */
+.page1 {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--background-color);
+  position: relative;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* height: 6vw; */
+  width: 100%;
+  /* background-color: aqua; */
+  padding: var(--padding);
+}
+nav .left {
+  position: relative;
+  line-height: 1.6vw;
+  z-index: 1;
+}
+nav .texts {
+  z-index: 2;
+}
+
+nav .texts h1 {
+  color: var(--nav-color);
+  font-weight: 100;
+  font-size: 2.1vw;
+}
+nav .texts h2 {
+  color: var(--nav-color2);
+  font-weight: 600;
+  font-size: 2vw;
+}
+nav .circle {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  right: 9%;
+  top: 19%;
+  z-index: 3;
+  mix-blend-mode: difference;
+  background-color: rgba(249, 0, 0, 0.721);
+}
+
+nav .right {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: black;
+  gap: 1vw;
+}
+nav .right a {
+  font-size: 1.3vw;
+  font-weight: 100;
+  padding: var(--padding-xs);
+  border: 1px solid #0000004e;
+  border-radius: 50px;
+  text-decoration: none;
+  color: var(--text-color);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.2s ease-in;
+}
+nav .right a:hover {
+  color: var(--text-color2);
+}
+nav .right a::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-color);
+  /* bottom: 0; */
+  bottom: -100%;
+  left: 0;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+nav .right a:hover::after {
+  bottom: 0;
+  border-radius: 0;
+}
