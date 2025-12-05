@@ -7,8 +7,8 @@ This project recreates smooth animations, interactive cursor effects, scroll-bas
 ---
 
 ## 🚀 Live Demo
-> Add your live deployed link here once available.
-
+> Live deployed.
+[![Live Preview](https://img.shields.io/badge/Live%20Preview-Visit%20Site-blue?style=for-the-badge)](https://frontend-projects-ivory.vercel.app/)
 ---
 
 ## 📌 Features
