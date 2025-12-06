@@ -408,7 +408,25 @@ nav .right a:hover::after {
 .elem:hover .overlay {
   top: 0;
 }
-
+.page3 .heading {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-xs);
+}
+.page3 .heading h4 {
+  font-size: 1vw;
+  font-family: var(--font-family2);
+  font-weight: 400;
+  padding: var(--padding-xs);
+  text-transform: uppercase;
+}
+.page3 .heading .circleSmall {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: var(--shape-color);
+}
 /* fixed image */
 #fixedImage {
   height: 29vw;
