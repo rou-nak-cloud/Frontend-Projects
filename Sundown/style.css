@@ -23,6 +23,9 @@ body {
   background: #ff5a2d;
   color: white;
 }
+#main {
+  background-color: var(--bg-color);
+}
 
 :root {
   --background-color: #efeae3;
@@ -447,4 +450,83 @@ nav .right a:hover::after {
 }
 #elemContainer {
   transition: all 0.3s ease-in-out;
+}
+
+/* Page 4 */
+.page4 {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--background-color);
+  padding: var(--padding);
+}
+.page4 .container {
+  height: 90vh;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page4 .container .leftDiv {
+  height: 100%;
+  width: 40vw;
+  background-color: black;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 0vw 8vw;
+  line-height: 4.3vw;
+}
+.page4 .container .leftDiv .text1 {
+  color: rgb(255, 255, 255);
+  font-size: 4.6vw;
+  font-family: var(--font-family1);
+  position: relative;
+}
+.page4 .container .leftDiv .text1::before {
+  content: "";
+  position: absolute;
+  left: -4%;
+  top: 0%;
+  width: 3px;
+  height: 100%;
+  background-color: var(--shape-color);
+  border-radius: 10px;
+  z-index: 3;
+}
+.page4 .container .leftDiv .text2 {
+  color: #ffffff4f;
+  font-size: 4.5vw;
+  font-family: var(--font-family1);
+}
+.page4 .container .leftDiv .text3 {
+  color: #ffffff4f;
+  font-size: 4.5vw;
+  font-family: var(--font-family1);
+  display: flex;
+  padding-right: 2px;
+}
+.page4 .container .leftDiv .text3 span {
+  color: var(--shape-color);
+  font-family: var(--font-family-condensed);
+}
+.page4 .container .leftDiv p {
+  color: var(--background-color);
+  line-height: 1.5vw;
+  font-family: var(--font-family-condensed);
+  font-weight: 200;
+  margin-top: -6vw;
+}
+.page4 .container .rightDiv {
+  height: 100%;
+  width: 60vw;
+  background-color: rebeccapurple;
+}
+.page4 .container .rightDiv img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
