@@ -26,6 +26,8 @@ body {
   --text-color2: #fff;
   --bg-color: black;
 
+  --shape-color: #FE320A
+
   --font-family1: "Raleway", sans-serif;
   --font-family2: "Work Sans", sans-serif;
   --font-family-condensed: "Roboto Condensed", sans-serif;
@@ -39,7 +41,7 @@ body {
 
 /* page1 */
 .page1 {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: var(--background-color);
   position: relative;
@@ -139,6 +141,7 @@ nav .right a:hover::after {
   justify-content: space-between;
   padding: var(--padding);
   border-bottom: 1px solid rgba(0, 0, 0, 0.482);
+  z-index: 1;
 }
 .page1 .center h3 {
   width: 25vw;
@@ -153,4 +156,70 @@ nav .right a:hover::after {
   line-height: 8vw;
   text-align: right;
   text-transform: uppercase;
+}
+.page1 video {
+  width: 100%;
+  border-radius: 30px;
+  margin-top: 3vw;
+  position: relative;
+  z-index: 2;
+}
+
+.page1 .heroShape{
+  height: 36vw;
+  width: 46vw;
+  position: absolute;
+  right: 0;
+  top: 67vh;
+  z-index: 1;
+}
+.page1 .heroShape .box1{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#f13906ec, #d13105ad);
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  filter: blur(29px);
+  opacity: 1;
+  mix-blend-mode: multiply; 
+}
+.page1 .heroShape .box2{
+  position: absolute;
+  width: 30vw;
+  height: 30vw;
+  background-color: #f53b07;
+  border-radius: 50%;
+  filter: blur(25px);
+  opacity: 0.9;
+  mix-blend-mode: multiply; 
+  animation: box2 4s ease-in-out infinite alternate-reverse;
+}
+.page1 .heroShape .box3{
+  position: absolute;
+  width: 30vw;
+  height: 30vw;
+  background-color: #f53b07;
+  border-radius: 50%;
+  filter: blur(25px);
+  opacity: 0.9;
+  mix-blend-mode: multiply; 
+  animation: box3 5s ease-in infinite alternate;
+}
+
+@keyframes box3 {
+  from{
+    transform: translate(12%,-7%);
+  }
+  to{
+    transform: translate(-25%,9%);
+  }
+}
+@keyframes box2 {
+  from{
+    transform: translate(35%,-5%);
+  }
+  to{
+    transform: translate(25%,-1%);
+  }
 }
