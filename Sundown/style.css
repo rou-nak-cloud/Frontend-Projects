@@ -42,6 +42,8 @@ body {
   --padding: 2vw 3vw;
   --padding-xs: 0.5vw 0.9vw;
   --padding-moving: 7vw 0vw;
+  --padding-top: 3vw 0vw;
+  --padding-side: 1vw 3vw;
 }
 
 /* page1 */
@@ -349,7 +351,82 @@ nav .right a:hover::after {
 
 /* page 3 */
 .page3 {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: var(--background-color);
+  position: relative;
+  /* padding: var(--padding-top); */
+}
+.page3 .elem {
+  height: 130px;
+  width: 100%;
+  border-bottom: 1px solid #00000061;
+  padding: var(--padding-side);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.page3 .elem h2 {
+  font-size: 2.5vw;
+  font-family: var(--font-family1);
+  font-weight: 600;
+  color: var(--text-color);
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease-in-out;
+}
+.page3 .elem .leftSide {
+  position: relative;
+  z-index: 2;
+  text-align: right;
+}
+.page3 .elem .leftSide h4 {
+  font-family: var(--font-family2);
+  font-weight: 400;
+  font-size: 1.3vw;
+}
+.page3 .elem .leftSide p {
+  font-family: var(--font-family2);
+  font-weight: 300;
+}
+.page3 .elem .overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: -100%;
+  background-color: rgb(255, 145, 0);
+  transition: all ease-in-out 0.3s;
+}
+.elem:hover h2 {
+  color: var(--text-color2);
+  scale: 0.93;
+}
+.elem:hover .overlay {
+  top: 0;
+}
+
+/* fixed image */
+#fixedImage {
+  height: 29vw;
+  width: 24vw;
+  /* background-color: rebeccapurple; */
+  border-radius: 12px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  /* left: 52%; // use if want to use static
+  top: 36%; */
+  background-size: cover;
+  background-position: center;
+  display: none;
+  transition: transform 0.08s linear;
+  pointer-events: none;
+}
+#elemContainer {
+  transition: all 0.3s ease-in-out;
 }
