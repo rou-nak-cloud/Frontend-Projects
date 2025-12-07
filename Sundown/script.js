@@ -17,7 +17,41 @@ requestAnimationFrame(raf);
 function imageDisplay() {
     var elemC = document.querySelector("#elemContainer");
     var fixedImg = document.querySelector("#fixedImage");
+     var elems = document.querySelectorAll(".elem"); // asAll gives nodeList similar as array
 
+    //  mobile mode
+     // 📌 1. MOBILE / TABLET MODE (<=1024px)
+    // =============================
+    if (window.innerWidth <= 1024) {
+        console.log("Mobile mode: static images enabled");
+
+        // hide floating image
+        fixedImg.style.display = "none";
+
+        elems.forEach((elem) => {
+            // remove desktop hover events
+            elem.onmouseenter = null;
+            elem.onmouseleave = null;
+            elem.onmousemove = null;
+
+            // create static image box
+            let img = document.createElement("div");
+            img.classList.add("static-img");
+
+            // get the image URL
+            const image = elem.getAttribute("data-image");
+            img.style.backgroundImage = `url(${image})`;
+
+            // avoid duplicates
+            if (!elem.querySelector(".static-img")) {
+                elem.appendChild(img);
+            }
+        });
+
+        return; // IMPORTANT → stop desktop script
+    }
+
+    //  Desktop mode
     // show / hide
     elemC.addEventListener("mouseenter", function () {
         fixedImg.style.display = "block";
@@ -27,7 +61,7 @@ function imageDisplay() {
     });
 
     // change image
-    var elems = document.querySelectorAll(".elem"); // asAll gives nodeList similar as array
+
     elems.forEach(function (e) {  // e-> each element and maps until all elements
         e.addEventListener("mouseenter", function () {
             var image = e.getAttribute("data-image");
@@ -158,9 +192,39 @@ function swiper(){
       centeredSlides: false, // to make left side div
       spaceBetween: 100,
       autoplay: {
-        delay: 2500,
+        delay: 2000,
         disableOnInteraction: false,
       },
     });
 }
 swiper();
+
+// navbar -> menu
+function navbarMobile(){
+    var menu = document.querySelector("nav h3")
+var fullNav = document.querySelector("#fullScr")
+var navOpacity = document.querySelector("nav .left")
+var flag = 0
+
+menu.addEventListener("click", function(){
+    if (flag == 0) {
+        fullNav.style.top = 0
+        navOpacity.style.opacity = 0
+        flag = 1
+    }else{
+        fullNav.style.top = "-200%"
+        navOpacity.style.opacity = 1
+        flag = 0
+    }
+})
+// ✅ AUTO-CLOSE on screen resize above 1024px
+    window.addEventListener("resize", function () {
+    if (window.innerWidth >= 1024) {
+        // force close
+        fullNav.style.top = "-200%";
+        navOpacity.style.opacity = 1;
+        flag = 0; // reset toggle state
+    }
+});
+}
+navbarMobile();
