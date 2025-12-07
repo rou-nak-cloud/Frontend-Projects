@@ -51,6 +51,21 @@ body {
   --padding-top: 3vw 0vw;
   --padding-side: 1vw 3vw;
 }
+/* cursor */
+.cursor {
+  height: 2vw;
+  width: 2vw;
+  border-radius: 50%;
+  background-color: var(--bg-color);
+  position: fixed;
+
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: overlay;
+}
 
 /* page1 */
 .page1 {

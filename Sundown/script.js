@@ -67,3 +67,59 @@ function imageDisplay() {
     animate();
 }
 imageDisplay();
+
+// cursor movement
+function cursorMovement(){
+    var page1 = document.querySelector(".page1")
+    var cursor = document.querySelector(".cursor")
+
+    page1.addEventListener("mousemove", function(e){
+        gsap.to(cursor,{
+            x: e.clientX,   // mouse X position
+            y: e.clientY,   // mouse Y position    
+            ease: "power1.out" // easing
+        })
+    })
+    // to only limit the cursor inside the page1 content
+    page1.addEventListener("mouseenter", function(){
+        gsap.to(cursor, {
+            scale: 1, 
+            // ease: "power1.in",
+            opacity: 1,
+        })
+    })
+    page1.addEventListener("mouseleave", function(){
+        gsap.to(cursor, {
+            scale: 0,
+            // ease: "power1.out",
+            opacity: 0, 
+        })
+    })
+
+    // for footer 
+    var footer = document.querySelector(".footer")
+
+    footer.addEventListener("mousemove", function(e){
+        gsap.to(cursor,{
+            x: e.clientX,   // mouse X position
+            y: e.clientY,   // mouse Y position    
+            ease: "power1.out" // easing
+        })
+    })
+    // to only limit the cursor inside the page1 content
+    footer.addEventListener("mouseenter", function(){
+        gsap.to(cursor, {
+            scale: 1, 
+            // ease: "power1.in",
+            opacity: 1,
+        })
+    })
+    footer.addEventListener("mouseleave", function(){
+        gsap.to(cursor, {
+            scale: 0,
+            // ease: "power1.out",
+            opacity: 0, 
+        })
+    })
+}
+cursorMovement();
