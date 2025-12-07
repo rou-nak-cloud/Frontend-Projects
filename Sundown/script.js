@@ -121,5 +121,46 @@ function cursorMovement(){
             opacity: 0, 
         })
     })
+
+    // swiper slide
+    var swiperSlides = document.querySelectorAll(".page5 .swiper .swiper-slide")
+
+     swiperSlides.forEach(slide => {
+    slide.addEventListener("mousemove", function(e){
+        gsap.to(cursor, {
+            x: e.clientX,
+            y: e.clientY,
+            ease: "power1.out"
+        })
+    });
+
+    slide.addEventListener("mouseenter", function(){
+        gsap.to(cursor, {
+            scale: 1,
+            opacity: 1,
+        })
+    });
+
+    slide.addEventListener("mouseleave", function(){
+        gsap.to(cursor, {
+            scale: 0,
+            opacity: 0,
+        })
+    });
+});
 }
 cursorMovement();
+
+// swiper
+function swiper(){
+     var swiper = new Swiper(".mySwiper", {
+      slidesPerView: "auto",
+      centeredSlides: false, // to make left side div
+      spaceBetween: 100,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+    });
+}
+swiper();
