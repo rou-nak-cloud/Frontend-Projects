@@ -1,6 +1,6 @@
-# Modern Animated Portfolio Website
+# Modern Animated Cloning of Sundown Website
 
-A clean, minimal, and animation-driven portfolio website built using **HTML**, **CSS**, and **JavaScript**, featuring smooth scrolling, GSAP animations, responsive layouts, and interactive UI elements.
+A clean, minimal, and animation-driven cloning of Sundown Website  using **HTML**, **CSS**, and **JavaScript**, featuring smooth scrolling, GSAP animations, responsive layouts, and interactive UI elements.
 
 ---
 ## 🚀 Live Demo
@@ -21,7 +21,7 @@ This project focuses on delivering a modern visual experience through:
 - **Fully responsive layout** for all screen sizes
 - **Optimized loader animation**
 
-The goal is to create a fast, fluid, and visually engaging portfolio website.
+The goal is to create a fast, fluid, and visually engaging cloning websites.
 
 ---
 
