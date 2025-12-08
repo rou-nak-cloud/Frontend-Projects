@@ -20,10 +20,9 @@ function imageDisplay() {
      var elems = document.querySelectorAll(".elem"); // asAll gives nodeList similar as array
 
     //  mobile mode
-     // 📌 1. MOBILE / TABLET MODE (<=1024px)
-    // =============================
+     // 1. MOBILE / TABLET MODE (<=1024px)
+ 
     if (window.innerWidth <= 1024) {
-        console.log("Mobile mode: static images enabled");
 
         // hide floating image
         fixedImg.style.display = "none";
