@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  background-color: black;
+  color: white;
+  /* line-height: 1.6; */
+}
+a {
+  text-decoration: none;
+  /* color: var(--text-color); */
+}
+
+:root {
+  --bg-black: black;
+  --bg-white: white;
+  --text-color: #fff;
+
+  --padding-side: 0vw 3vw;
+  --padding-small: 0.3vw 0.8vw;
+}
+
+/* Page 1 */
+.page1 {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--bg-black);
+  /* color: var(--text-color); */
+}
+.nav {
+  height: 7vh;
+  width: 100%;
+  /* background-color: rebeccapurple; */
+  padding: var(--padding-side);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3vw;
+}
+.navLeft h2 {
+  height: 6vh;
+  width: 8vw;
+  padding-left: 1.3vw;
+  padding-top: 0.2vw;
+  display: flex;
+  align-items: center;
+  font-size: 1.7vw;
+  position: relative;
+  z-index: 1;
+  color: var(--text-color);
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+}
+.navLeft h2:hover {
+  color: var(--bg-black);
+}
+.navLeft h2::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin-left: -1vw;
+  background-color: var(--bg-white);
+  bottom: -100%;
+  left: 0;
+  border-radius: 10%;
+  transition: all 0.3s ease-in-out;
+}
+.navLeft h2:hover::after {
+  bottom: -15%;
+  border-radius: 50px;
+}
+.navMiddle {
+  display: flex;
+  align-items: center;
+  gap: 0.2vw;
+  cursor: pointer;
+}
+.navMiddle a {
+  color: var(--text-color);
+  font-weight: 100;
+  border: 1px solid #000000;
+  padding: var(--padding-small);
+  border-radius: 50px;
+  position: relative;
+  z-index: 1;
+  transition: all 0.4s ease-in;
+  overflow: hidden;
+}
+.navMiddle a:nth-child(1) {
+  text-decoration: underline;
+  text-underline-offset: 0.5vw;
+}
+.navMiddle a:hover {
+  color: var(--bg-black);
+  scale: 0.99;
+}
+.navMiddle a::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-white);
+  /* bottom: 0; */
+  bottom: -100%;
+  left: 0;
+  border-radius: 50%;
+  transition: all 0.4s ease-in-out;
+}
+.navMiddle a:hover::after {
+  border-radius: 50px;
+  bottom: 0;
+}
+.navRight .navCircle {
+  height: 2vw;
+  width: 2vw;
+  border-radius: 50%;
+  background-color: var(--bg-white);
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+.navRight .navCircle::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 50px;
+  position: absolute;
+  z-index: -1;
+  left: -100%;
+  /* bottom: -100%; */
+  background-color: var(--bg-black);
+  transition: all 0.4s ease-in-out;
+}
+.navRight .navCircle:hover::after {
+  left: -35%;
+  border-radius: 20px;
+}
