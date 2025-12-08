@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -28,15 +30,22 @@ a {
 
   --padding-side: 0vw 3vw;
   --padding-small: 0.3vw 0.8vw;
+  --padding-text-top: 10vw;
+  --padding-text-left: 12vw;
+  --padding-text-moreLeft: 30vw;
+
+  --font1: "Roboto Condensed", sans-serif;
 }
 
-/* Page 1 */
+/* PAGE 1 */
 .page1 {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: var(--bg-black);
   /* color: var(--text-color); */
+  font-family: var(--font1);
 }
+/* nav */
 .nav {
   height: 7vh;
   width: 100%;
@@ -84,12 +93,12 @@ a {
 .navMiddle {
   display: flex;
   align-items: center;
-  gap: 0.2vw;
+  gap: 0.1vw;
   cursor: pointer;
 }
 .navMiddle a {
   color: var(--text-color);
-  font-weight: 100;
+  font-weight: 300;
   border: 1px solid #000000;
   padding: var(--padding-small);
   border-radius: 50px;
@@ -97,6 +106,7 @@ a {
   z-index: 1;
   transition: all 0.4s ease-in;
   overflow: hidden;
+  text-transform: uppercase;
 }
 .navMiddle a:nth-child(1) {
   text-decoration: underline;
@@ -148,4 +158,43 @@ a {
 .navRight .navCircle:hover::after {
   left: -35%;
   border-radius: 20px;
+}
+
+/* center */
+.pageCenter {
+  line-height: 7.7vw;
+}
+.pageCenter > h1:nth-child(1) {
+  font-size: 8vw;
+  font-weight: 500;
+  margin-top: var(--padding-text-top);
+  margin-left: var(--padding-text-left);
+}
+.pageCenter h1:nth-child(2) {
+  font-size: 8vw;
+  font-weight: 500;
+  margin-left: var(--padding-text-moreLeft);
+}
+.pageCenter .videoContainer {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 4vw;
+}
+.pageCenter .videoContainer .text {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: -2.8vw;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.pageCenter .videoContainer video {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover;
 }
