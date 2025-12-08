@@ -227,3 +227,12 @@ menu.addEventListener("click", function(){
 });
 }
 navbarMobile();
+
+// Loader
+function loading(){
+    var loader = document.querySelector("#loader")
+    setTimeout(()=>{
+        loader.style.top = "-100%"
+    },4000)
+}
+loading();
