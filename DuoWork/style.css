@@ -33,12 +33,15 @@ a {
   --bg-black: black;
   --bg-white: white;
   --text-color: #fff;
+  --button-color: #edbfff;
 
+  --padding: 3vw 3vw;
   --padding-side: 0vw 3vw;
   --padding-small: 0.3vw 0.8vw;
   --padding-text-top: 10vw;
   --padding-text-left: 12vw;
   --padding-text-moreLeft: 30vw;
+  --padding-button: 0.35vw 0;
 
   --font1: "Roboto Condensed", sans-serif;
 }
@@ -184,6 +187,7 @@ a {
 .pageCenter .videoContainer {
   display: flex;
   flex-direction: column;
+  /* height: 90vh; */
   width: 60%;
   position: relative;
   left: 50%;
@@ -204,4 +208,67 @@ a {
   border-radius: 10px;
   background-position: center;
   background-size: cover;
+}
+
+/* PAGE 2 */
+.page2 {
+  min-height: 90vh;
+  width: 100%;
+  padding: var(--padding);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-top: 1vw;
+}
+.page2 h1 {
+  font-size: 8vw;
+  font-family: var(--font1);
+  font-weight: 400;
+  /* color: rebeccapurple; */
+  color: var(--bg-black);
+}
+.page2 .page2Container {
+  height: 60vh;
+  width: 100%;
+  /* background-color: teal; */
+  font-family: var(--font1);
+  color: var(--bg-black);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--padding-side);
+}
+.page2Container .page2Left {
+  width: 30vw;
+  line-height: 3.6vw;
+}
+.page2Container .page2Left h2 {
+  font-size: 4.1vw;
+  font-weight: 400;
+}
+.page2Container .page2Right {
+  height: 38vh;
+  width: 24vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.page2Container .page2Right p {
+  font-size: 1.35vw;
+  font-weight: 300;
+}
+.page2Container .page2Right button {
+  width: 90%;
+  background-color: var(--button-color);
+  padding: var(--padding-button);
+  color: var(--bg-black);
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 4vw;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.page2Container .page2Right button:hover {
+  color: var(--text-color);
+  background-color: var(--bg-black);
 }

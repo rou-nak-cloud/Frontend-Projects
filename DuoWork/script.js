@@ -35,3 +35,18 @@ tl1.to(".page1 .pageCenter .textSec", {
 tl1.to(".page1 .videoContainer ", {
     width: "90%"
 },"anim")    
+
+// page 2
+var tl2 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".page2",
+        scroller: "body",
+        // markers: true,
+        start: "top 50%",
+        end: "top 60",
+        scrub: 3,        
+    },
+})
+tl2.to(".page2", {
+    backgroundColor: "#FFF"
+})
