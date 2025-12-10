@@ -45,6 +45,31 @@ a {
 
   --font1: "Roboto Condensed", sans-serif;
 }
+#cursor {
+  width: 1vw;
+  height: 1vw;
+  position: fixed;
+  border-radius: 50%;
+  background-color: var(--button-color);
+  z-index: 99;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(1);
+  /* transition: transform 0.1s linear; */
+  transition: transform 0.1s linear, border-radius 0.25s ease, width 0.25s ease,
+    height 0.25s ease, background 0.2s ease;
+  /* for the text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: red;
+  font-size: 1vw;
+  opacity: 0.9;
+}
+#cursor span {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
 
 /* PAGE 1 */
 .page1 {
