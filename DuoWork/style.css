@@ -39,6 +39,7 @@ a {
   --padding-side: 0vw 3vw;
   --padding-small: 0.3vw 0.8vw;
   --padding-text-top: 10vw;
+  --padding-page3-top: 15vw;
   --padding-text-left: 12vw;
   --padding-text-moreLeft: 30vw;
   --padding-button: 0.35vw 0;
@@ -407,4 +408,73 @@ a {
 .page2 .page2Last .page2Circle:hover .textCircle {
   color: var(--bg-white);
   scale: 1.08;
+}
+
+/* PAGE 3 */
+.page3 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  padding: var(--padding);
+  padding-top: var(--padding-page3-top);
+  background-color: var(--bg-white);
+}
+.page3 .brandText {
+  width: 100%;
+  /* background-color: red; */
+  text-align: center;
+  font-family: var(--font1);
+  font-family: 300;
+  font-size: 0.7vw;
+  text-transform: uppercase;
+  margin-bottom: 2vw;
+}
+.page3 .elem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* gap: 2vw; */
+  /* padding-top: var(--padding-text-top); */
+  transition: all 0.3s ease-in-out;
+  /* background-color: rebeccapurple; */
+}
+.page3 .elem .textDiv {
+  height: 15vh;
+  width: 35vw;
+  overflow: hidden;
+  text-align: center;
+  /* background-color: red; */
+}
+.page3 .elem img {
+  width: 25vw;
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.6vw;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(10%) rotate(2deg);
+}
+.page3 .elem img:nth-child(1) {
+  left: 0;
+}
+.page3 .elem img:nth-child(3) {
+  right: 0;
+}
+.page3 .elem h2 {
+  text-transform: uppercase;
+  font-family: var(--font1);
+  font-size: 7vw;
+  font-weight: 400;
+  transition: all 0.4s ease-in-out;
+}
+.page3 .elem:hover h2 {
+  transform: translateY(-100%);
+  color: var(--button-color);
+}
+.page3 .elem:hover img {
+  opacity: 1;
+  transform: translateY(0%) rotate(0deg);
 }
