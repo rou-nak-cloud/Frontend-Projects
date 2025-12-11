@@ -43,60 +43,7 @@ video.addEventListener("mouseleave", () => {
 }
 cursor();
 
-// gsap
-gsap.registerPlugin(ScrollTrigger)
-// page 1 gsap
-var tl1 = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".page1 .pageCenter h1",
-        scroller: "body",
-        // markers: true,
-        start: "top 20%",
-        end: "top 0",
-        scrub: 3,        
-    },
-})
-tl1.to(".page1 .pageCenter .textFir", {
-    x: -100,
-},"anim") // same name for everyone to start at once together
-tl1.to(".page1 .pageCenter .textSec", {
-    x: 100,
-},"anim")
-tl1.to(".page1 .videoContainer ", {
-    width: "90%"
-},"anim")    
-
-// page 2
-var tl2 = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".page2",
-        scroller: "body",
-        // markers: true,
-        start: "top 50%",
-        end: "top 60%",
-        scrub: 3,        
-    },
-})
-tl2.to(".page2", {
-    backgroundColor: "#FFF"
-})
-// page 3
-var tl3 = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".page3",
-        scroller: "body",
-        // markers: true,
-        start: "top 30%",
-        end: "top 40%",
-        scrub: 3,        
-    },
-})
-tl3.to(".page3", {
-    backgroundColor: "#000"
-})
-
-
-
+// image display
 function imageDisplay(){
         var elemC = document.querySelector("#elemContainer");
     var fixedImg = document.querySelector("#fixedImage");
@@ -151,3 +98,71 @@ function imageDisplay(){
     animate();
 }
 imageDisplay();
+
+// gsap
+gsap.registerPlugin(ScrollTrigger)
+// page 1 gsap
+var tl1 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".page1 .pageCenter h1",
+        scroller: "body",
+        // markers: true,
+        start: "top 20%",
+        end: "top 0",
+        scrub: 3,        
+    },
+})
+tl1.to(".page1 .pageCenter .textFir", {
+    x: -100,
+},"anim") // same name for everyone to start at once together
+tl1.to(".page1 .pageCenter .textSec", {
+    x: 100,
+},"anim")
+tl1.to(".page1 .videoContainer ", {
+    width: "90%"
+},"anim")    
+
+// page 2
+var tl2 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".page2",
+        scroller: "body",
+        // markers: true,
+        start: "top 50%",
+        end: "top 60%",
+        scrub: 3,        
+    },
+})
+tl2.to(".page2", {
+    backgroundColor: "#FFF"
+})
+// page 3
+var tl3 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".page3",
+        scroller: "body",
+        // markers: true,
+        start: "top 30%",
+        end: "top 40%",
+        scrub: 3,        
+    },
+})
+tl3.to(".page3", {
+    backgroundColor: "#000"
+})
+
+// page 5
+var tl5 = gsap.timeline({
+    scrollTrigger: {
+        trigger: "#page5",
+        scroller: "body",
+        // markers: true,
+        start: "top 55%",
+        end: "top 60%",
+        scrub: 3,        
+    },
+})
+tl5.to("#page5", {
+    backgroundColor: "#edbfff"
+})
+
