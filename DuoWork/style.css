@@ -11,6 +11,7 @@ body {
   scroll-behavior: smooth;
   -ms-overflow-style: none; /* IE/Edge */
   --scrollbar-width: none; /* Firefox */
+  cursor: none;
 }
 body::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
@@ -79,6 +80,7 @@ a {
   background-color: var(--bg-black);
   /* color: var(--text-color); */
   font-family: var(--font1);
+  padding-top: var(--padding-text-top);
 }
 /* nav */
 .nav {
@@ -90,6 +92,10 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 3vw;
+  font-family: var(--font1);
+  position: fixed;
+  z-index: 999;
+  mix-blend-mode: difference;
 }
 .navLeft h2 {
   height: 6vh;
@@ -202,7 +208,6 @@ a {
 .pageCenter > h1:nth-child(1) {
   font-size: 8vw;
   font-weight: 500;
-  margin-top: var(--padding-text-top);
   margin-left: var(--padding-text-left);
 }
 .pageCenter h1:nth-child(2) {
@@ -477,4 +482,68 @@ a {
 .page3 .elem:hover img {
   opacity: 1;
   transform: translateY(0%) rotate(0deg);
+}
+
+/* page 4 */
+.page4 {
+  min-height: 90vh;
+  width: 100%;
+  padding: var(--padding);
+}
+.page4 h2 {
+  font-size: 5vw;
+  font-family: var(--font1);
+  font-weight: 300;
+  text-transform: uppercase;
+  padding-bottom: var(--padding-small);
+  margin-bottom: 2vw;
+}
+.page4 .box {
+  padding: var(--padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #4a4a4a;
+  /* background-color: red; */
+  height: 12vh;
+}
+.page4 .box:nth-last-child(1) {
+  border-bottom: 1px solid #4a4a4a;
+}
+.page4 .box:hover h3 {
+  color: #edbfff;
+  font-weight: 500;
+  scale: 1.2;
+}
+.page4 .box:hover h4 {
+  color: #edbfff;
+  font-weight: 500;
+}
+.page4 .box h3,
+h4 {
+  font-family: var(--font1);
+  font-weight: 200;
+  transition: all 0.2s ease-in-out;
+}
+
+/* fixed image */
+#fixedImage {
+  height: 29vw;
+  width: 24vw;
+  /* background-color: rebeccapurple; */
+  border-radius: 12px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  /* left: 52%; // use if want to use static
+  top: 36%; */
+  background-size: cover;
+  background-position: center;
+  display: none;
+  transition: transform 0.2s linear;
+  pointer-events: none;
+}
+#elemContainer {
+  transition: all 0.3s ease-in-out;
 }
