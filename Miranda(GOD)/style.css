@@ -20,6 +20,9 @@
 html {
   scroll-behavior: smooth;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 
 body {
   height: 100%;
@@ -28,18 +31,30 @@ body {
   background-color: #c4bcb3;
   color: black;
   /* line-height: 1.6; */
+  overflow-x: hidden;
 }
 
-/* main */
-#main {
-  min-height: 100vh;
-  width: 100%;
+/* PAPER BACKGROUND LAYER */
+/* .paper-background {
+  position: fixed;
+  inset: 0;
+  will-change: transform;
+  z-index: 0;
+  pointer-events: none;
+
   background-color: rgb(171, 159, 146);
   background-image: url("./assets/bgTexture.jpg");
-  /* background-position: center;
-  background-size: cover; */
-  background-blend-mode: soft-light;
+  background-repeat: repeat;
+  background-position: 50%;
+
+  opacity: 0.3;
+  mix-blend-mode: multiply;
 }
+
+#main > *:not(.paper-background) {
+  position: relative;
+  z-index: 1;
+} */
 
 /* root */
 :root {
@@ -47,36 +62,83 @@ body {
   --padding-TBLR: 2vw 2.5vw;
   --padding-side: 0.8vw 2vw;
   --padding: 2vw 4vw;
+
+  --nav-height: 10vh;
+  --bg-texture: rgba(196, 188, 181, 0.807);
 }
 
 /* Page 1 */
 .page1 {
-  height: 100vh;
+  min-height: calc(100vh - var(--nav-height));
   width: 100%;
+  position: relative;
+  margin-top: var(--nav-height);
+  overflow-x: hidden;
+
+  background-color: var(--bg-texture);
+}
+.page1::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("./assets/bgTexture.jpg");
+  background-repeat: repeat;
+  background-position: center;
+
+  opacity: 0.4;
+  mix-blend-mode: multiply;
+
+  pointer-events: none;
 }
 
 .nav {
-  height: 3vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: var(--nav-height);
   width: 100%;
+  z-index: 9;
+
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 
-  padding: var(--padding-TBLR-main);
-  border-bottom: 1px solid #6d6d6d;
+  padding: 0 2vw;
+  background-color: var(--bg-texture);
 }
+
+.nav::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("./assets/bgTexture.jpg");
+  background-repeat: repeat;
+  background-position: center;
+
+  opacity: 0.4;
+  mix-blend-mode: multiply;
+
+  pointer-events: none;
+}
+.nav > * {
+  position: relative;
+  z-index: 1;
+}
+
 .nav h3 {
-  font-size: 0.9vw;
-  font-family: light;
+  font-size: 1.2vw;
+  font-family: domaine;
   font-weight: 500;
   width: 30%;
 }
 .nav img {
-  height: 3vh;
+  height: 4vh;
   width: 30%;
 }
 .nav i {
-  font-size: 1.2vw;
+  font-size: 1.4vw;
   font-weight: 200;
   width: 30%;
   text-align: right;
@@ -211,4 +273,42 @@ body {
   font-size: 1.5vw;
   font-weight: 500;
   letter-spacing: -0.08vw;
+}
+
+/* center */
+.page1 .center h1 {
+  font-family: canopee;
+  font-weight: 400;
+  font-size: 37.5vw;
+  margin-left: 2%;
+  padding-left: 0.5vw;
+  width: 96%;
+  background-color: #1c1b19;
+  color: #c4bcb3;
+  line-height: 33vw;
+  letter-spacing: -1.8vw;
+  overflow: hidden;
+}
+
+/* PAGE 2 */
+.page2 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+
+  background-color: var(--bg-texture);
+}
+.page2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("./assets/bgTexture.jpg");
+  background-repeat: repeat;
+  background-position: center;
+
+  opacity: 0.4;
+  mix-blend-mode: multiply;
+
+  pointer-events: none;
 }
