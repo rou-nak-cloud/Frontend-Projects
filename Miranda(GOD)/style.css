@@ -1,0 +1,214 @@
+@font-face {
+  font-family: canopee;
+  src: url(./assets/fonts/Canopee.ttf);
+}
+@font-face {
+  font-family: domaine;
+  src: url(./assets/fonts/DomaineDispCondMedium.ttf);
+}
+@font-face {
+  font-family: light;
+  src: url(./assets/fonts/EditorialNew-Light.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  background-color: #c4bcb3;
+  color: black;
+  /* line-height: 1.6; */
+}
+
+/* main */
+#main {
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgb(171, 159, 146);
+  background-image: url("./assets/bgTexture.jpg");
+  /* background-position: center;
+  background-size: cover; */
+  background-blend-mode: soft-light;
+}
+
+/* root */
+:root {
+  --padding-TBLR-main: 3vw 2vw;
+  --padding-TBLR: 2vw 2.5vw;
+  --padding-side: 0.8vw 2vw;
+  --padding: 2vw 4vw;
+}
+
+/* Page 1 */
+.page1 {
+  height: 100vh;
+  width: 100%;
+}
+
+.nav {
+  height: 3vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: var(--padding-TBLR-main);
+  border-bottom: 1px solid #6d6d6d;
+}
+.nav h3 {
+  font-size: 0.9vw;
+  font-family: light;
+  font-weight: 500;
+  width: 30%;
+}
+.nav img {
+  height: 3vh;
+  width: 30%;
+}
+.nav i {
+  font-size: 1.2vw;
+  font-weight: 200;
+  width: 30%;
+  text-align: right;
+  cursor: pointer;
+}
+
+/* elems */
+.elems {
+  padding: var(--padding-TBLR);
+  height: 48vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.elems .elem1 {
+  width: 30%;
+  height: 100%;
+}
+.elems .elem2 {
+  width: 30%;
+  height: 100%;
+  border-right: 2px solid #919191;
+  border-left: 2px solid #919191;
+
+  padding: var(--padding-side);
+  text-align: center;
+  cursor: grabbing;
+}
+.elems .elem3 {
+  width: 30%;
+  height: 100%;
+}
+.imgDiv img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease-in-out;
+}
+.elems .elem1:hover .imgDiv img,
+.elem3:hover .imgDiv img {
+  scale: 1.05;
+}
+.elem1 .imgDiv {
+  height: 23vh;
+  width: 100%;
+  border: 1.3px solid #161616;
+  overflow: hidden;
+}
+.elem3 .imgDiv {
+  height: 23vh;
+  width: 100%;
+  border: 1px solid #161616;
+  overflow: hidden;
+}
+
+.elems .elem1 h4 {
+  margin: 0.8vw 0;
+  font-size: 1.5vw;
+  font-family: canopee;
+  font-weight: 600;
+  position: relative;
+}
+.elems .elem1 h4 span {
+  background-color: #b43b12;
+  color: rgb(207, 207, 207);
+  font-weight: 100;
+  font-size: 1.1vw;
+  padding: 3px;
+  border-radius: 5px;
+  position: absolute;
+  top: 1px;
+  right: 71%;
+}
+.elems .elem1 p {
+  font-family: light;
+  font-size: 1.29vw;
+  font-weight: 300;
+}
+.elems .elem2 h3 span {
+  display: inline-block;
+  height: 2px;
+  width: 1.9vw;
+  margin-bottom: 0.6vw;
+  background-color: black;
+}
+.elems .elem3 h4 {
+  margin: 0.8vw 0;
+  font-size: 1.5vw;
+  font-weight: 600;
+  font-family: canopee;
+  position: relative;
+}
+.elems .elem3 h4 span {
+  background-color: #b43b12;
+  color: rgb(207, 207, 207);
+  font-weight: 100;
+  font-size: 1.1vw;
+  padding: 3px;
+  border-radius: 5px;
+  position: absolute;
+  top: 1px;
+  right: 60%;
+}
+.elems .elem3 p {
+  font-family: light;
+  font-size: 1.29vw;
+  font-weight: 300;
+}
+
+.elems .elem2 h2 {
+  font-family: canopee;
+  font-size: 4.4vw;
+  letter-spacing: -0.3vw;
+  font-weight: 300;
+  margin-bottom: 1.2vw;
+}
+.elems .elem2 h3 {
+  font-family: light;
+  font-size: 2.7vw;
+  font-weight: 300;
+  line-height: 3vw;
+  margin-bottom: 1.8vw;
+}
+.elems .elem2 h5 {
+  font-family: light;
+  font-size: 1.3vw;
+  font-weight: 500;
+}
+.elems .elem2 h5 span {
+  font-family: domaine;
+  font-size: 1.5vw;
+  font-weight: 500;
+  letter-spacing: -0.08vw;
+}
