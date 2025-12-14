@@ -34,28 +34,6 @@ body {
   overflow-x: hidden;
 }
 
-/* PAPER BACKGROUND LAYER */
-/* .paper-background {
-  position: fixed;
-  inset: 0;
-  will-change: transform;
-  z-index: 0;
-  pointer-events: none;
-
-  background-color: rgb(171, 159, 146);
-  background-image: url("./assets/bgTexture.jpg");
-  background-repeat: repeat;
-  background-position: 50%;
-
-  opacity: 0.3;
-  mix-blend-mode: multiply;
-}
-
-#main > *:not(.paper-background) {
-  position: relative;
-  z-index: 1;
-} */
-
 /* root */
 :root {
   --padding-TBLR-main: 3vw 2vw;
@@ -64,9 +42,13 @@ body {
   --padding: 2vw 4vw;
 
   --nav-height: 10vh;
-  --bg-texture: rgba(196, 188, 181, 0.807);
+  --bg-texture: rgba(196, 188, 181, 0.529);
 }
 
+#main {
+  background-color: rgba(221, 212, 212, 0.619);
+  overflow: hidden;
+}
 /* Page 1 */
 .page1 {
   min-height: calc(100vh - var(--nav-height));
