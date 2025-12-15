@@ -55,6 +55,15 @@ function loader() {
 }, "-=0.4"); // overlap timing
 }
 
+ var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      centeredSlides: false,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
 
 lenis();
 loader();
