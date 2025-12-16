@@ -55,7 +55,8 @@ function loader() {
 }, "-=0.4"); // overlap timing
 }
 
- var swiper = new Swiper(".mySwiper", {
+function swipper(){
+     var swiper = new Swiper(".mySwiper", {
       slidesPerView: 3,
       spaceBetween: 30,
       centeredSlides: false,
@@ -64,6 +65,23 @@ function loader() {
         clickable: true,
       },
     });
+}
+
+function moveText(){
+    const marquee = document.querySelector(".marquee");
+
+// get half width (because text is duplicated)
+const marqueeWidth = marquee.scrollWidth / 2;
+
+gsap.to(marquee, {
+  x: -marqueeWidth,
+  duration: 12,
+  ease: "none",
+  repeat: -1
+});
+}
 
 lenis();
 loader();
+swipper();
+moveText();

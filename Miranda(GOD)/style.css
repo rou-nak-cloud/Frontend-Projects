@@ -923,7 +923,6 @@ body {
 }
 
 /* page 8 */
-/* page 6 */
 .page8 {
   height: 80vh;
   width: 100%;
@@ -931,7 +930,7 @@ body {
   background-color: var(--bg-texture);
   /* padding: var(--padding-TBLR); */
   padding-top: 3.5vw;
-  padding-bottom: 1vw;
+  padding-bottom: 5vw;
 }
 .page8::before {
   content: "";
@@ -957,4 +956,66 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* page 9 */
+.page9 {
+  height: 20vh;
+  width: 100%;
+  position: relative;
+  background-color: var(--bg-texture);
+  /* padding: var(--padding-TBLR); */
+  padding: 2.2vw 1vw;
+
+  border-top: 1px solid #323232;
+  border-bottom: 1px solid #303030;
+
+  cursor: grabbing;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.page9::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("./assets/bgTexture.jpg");
+  background-repeat: repeat;
+  background-position: center;
+  opacity: 0.6;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+.page9 h1 {
+  font-family: domaine;
+  font-size: 6vw;
+  font-weight: 100;
+  letter-spacing: -0.27vw;
+  line-height: 5vw;
+
+  display: inline-block;
+  margin-right: 2px;
+  width: max-content;
+  will-change: transform;
+  white-space: nowrap;
+  animation: moveText 6s linear infinite;
+}
+.page9 h1 span {
+  font-family: canopee;
+  background-color: #1c1c19;
+  color: #c4bcb3;
+  padding: 0 1vw;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(calc(-100% - 1px));
+  }
+}
+
+/* footer */
+.footer {
+  height: 100px;
 }
