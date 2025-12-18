@@ -31,9 +31,9 @@ function loader() {
     
     // page comes in
     tl.to(page, {
-        y: "20vh",
+        y: "10vh",
         duration: 1,
-        ease: "power3.out",
+        ease: "power2.out",
         delay: .7,
     });
     
@@ -43,7 +43,7 @@ function loader() {
         scale: 1,
         rotation: -360,
         duration: 1,
-        ease: "power3.inOut",
+        ease: "power1.inOut",
     });
     
     // nav appears AFTER page settles
@@ -60,28 +60,14 @@ function swipper(){
       slidesPerView: 3,
       spaceBetween: 30,
       centeredSlides: false,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
+       autoplay: {
+        delay: 2800,
+        disableOnInteraction: false,
       },
     });
 }
 
-function moveText(){
-    const marquee = document.querySelector(".marquee");
-
-// get half width (because text is duplicated)
-const marqueeWidth = marquee.scrollWidth / 2;
-
-gsap.to(marquee, {
-  x: -marqueeWidth,
-  duration: 12,
-  ease: "none",
-  repeat: -1
-});
-}
 
 lenis();
 loader();
 swipper();
-moveText();
