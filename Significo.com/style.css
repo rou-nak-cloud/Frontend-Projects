@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*::selection {
+  background-color: rgba(250, 128, 114, 0.911);
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+body[theme="black"] {
+  background-color: black;
+}
+body[theme="black"] .section {
+  color: white;
+}
+
+body[theme="white"] {
+  background-color: white;
+}
+body[theme="white"] .section {
+  color: black;
+}
+
+body[theme="grey"] {
+  background-color: grey;
+}
+body[theme="grey"] .section {
+  color: black;
+}
+
+body[theme="cyan"] {
+  background-color: cyan;
+}
+body[theme="cyan"] .section {
+  color: black;
+}
+
+body[theme="green"] {
+  background-color: green;
+}
+
+body[theme="green"] .section {
+  color: black;
+}
+
+body[theme="salmon"] {
+  background-color: salmon;
+}
+
+body[theme="salmon"] .section {
+  color: black;
+}
