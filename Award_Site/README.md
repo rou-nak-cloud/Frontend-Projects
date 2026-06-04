@@ -3,6 +3,8 @@
 A high-fidelity, motion-driven frontend showcase built around a premium interactive chocolate concept. This project was engineered to push the boundaries of scroll-synchronized storytelling, dynamic layout vectors, and cinematic web interactions using **React**, **Tailwind CSS**, and **GSAP**.
 
 ---
+🔗 **[Live Preview Layout](https://frontend-projects-award21.vercel.app/)**
+---
 
 ## ✨ Key Features & Creative Mechanics
 
