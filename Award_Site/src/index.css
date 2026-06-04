@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Britney";
+  src: url("/fonts/Britney-Variable.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GeneralSans";
+  src: url("/fonts/GeneralSans-Variable.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@theme {
+  --font-heading: "Britney", sans-serif;
+  --font-body: "GeneralSans", sans-serif;
+
+  --color-gradient: linear-gradient(
+    90deg,
+    #ff4d6d 0%,
+    #bd3eb2 25%,
+    #7b2ff7 50%,
+    #2f86f7 75%,
+    #2ff7ed 100%
+  );
+
+  /* for Award Site */
+  --color-beige: #f5f0e4;
+  --color-black: #2c2c2c;
+  --color-brown: #571f01;
+  --color-orange: #ff6b57;
+  --color-blue: #489cd3;
+  --color-yellow: #fdd326;
+  --color-green: #9d9c3d;
+}
+
+@layer base {
+  body {
+    @apply bg-[#0a0a0a] text-white font-body text-xl overflow-x-clip;
+  }
+  .awardBody {
+    @apply bg-beige text-black font-body text-lg overflow-x-clip;
+  }
+}
+
+@layer components {
+  .main-container {
+    @apply max-w-7xl mx-auto px-2 lg:px-3;
+  }
+  .menu-line {
+    @apply flex flex-col gap-1.5 cursor-pointer;
+  }
+
+  .line-gradient {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 0.5vh;
+      background: var(--color-gradient);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 8px;
+      width: 100%;
+      height: 2px;
+      background: var(--color-gradient);
+    }
+  }
+
+  .text-stroke {
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+  }
+
+  .gradient-btn {
+    background:
+      linear-gradient(#000, #000) padding-box,
+      var(--color-gradient) border-box;
+    transition: all 0.4s ease;
+    color: #fff;
+  }
+  .gradient-btn:hover {
+    background:
+      var(--color-gradient) padding-box,
+      var(--color-gradient) border-box;
+  }
+
+  .gradient-btn-light {
+    background:
+      linear-gradient(#ffffff, #fff) padding-box,
+      var(--color-gradient) border-box;
+    transition: all 0.4s ease;
+    color: #000;
+  }
+  .gradient-btn-light:hover {
+    background:
+      var(--color-gradient) padding-box,
+      var(--color-gradient) border-box;
+    color: #fff;
+  }
+
+  .font-base {
+    @apply font-body text-2xl font-bold uppercase tracking-wide text-gray-900;
+  }
+
+  .menu-link {
+    @apply text-[10vw] lg:text-[6vw] font-body font-medium uppercase lg:opacity-60 hover:opacity-100;
+  }
+
+  /* Animation */
+  @keyframes marquee {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  .animate-marquee {
+    animation: marquee 20s linear infinite;
+  }
+
+  /* @keyframes marquee-reverse {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  } */
+  .animate-marquee-reverse {
+    animation: marquee 20s linear infinite reverse;
+  }
+}
+
+@layer utilities {
+  .nav-link-grow {
+    @apply relative py-1 block text-neutral-600 hover:text-black;
+  }
+
+  /* Creates the custom sliding underline mask effect */
+  .nav-link-grow::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-[#FF6B57] transition-all duration-300;
+  }
+
+  /* Expands the line to 100% width on hover */
+  .nav-link-grow:hover::after {
+    @apply w-full;
+  }
+}
