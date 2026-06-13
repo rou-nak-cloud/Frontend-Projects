@@ -1,16 +1,30 @@
-# React + Vite
+# 🍫 Melt Chocolate — Junior Developer Award Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-fidelity, motion-driven frontend showcase built around a premium interactive chocolate concept. This project was engineered to push the boundaries of scroll-synchronized storytelling, dynamic layout vectors, and cinematic web interactions using **React**, **Tailwind CSS**, and **GSAP**.
 
-Currently, two official plugins are available:
+---
+🔗 **[Live Preview Layout](https://frontend-projects-award21.vercel.app/)**
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Key Features & Creative Mechanics
 
-## React Compiler
+* **Dynamic Theme Routing Engine:** Utilizes React component lifecycles to dynamically toggle root global classes (`body.awardBody`), flipping the site from deep dark mode to an elegant beige color profile seamlessly on route switches.
+* **Vector-Driven Scroll Synchronization:** Real-time calculation of viewport boundaries (`getBoundingClientRect()`) to fly chocolate assets across the layout, landing them perfectly centered inside fluid target text grids.
+* **Fluid Mobile Navigation Trigger:** A clean, minimal UI layout that adapts to mobile viewports by transforming the "Explore Flavors" action button into a smooth dropdown toggle, omitting heavy hamburger overlays.
+* **Alpha-Aware Visual Glows:** Implements targeted CSS `drop-shadow` filters rather than standard layout bounding box-shadows to hug the precise contours of transparent graphical assets.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack & Engineering Toolkit
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Framework:** React (Vite)
+* **Styling:** Tailwind CSS (featuring custom `@layer base` and utility abstractions)
+* **Motion & Timelines:** GSAP, `@gsap/react` (useGSAP), ScrollTrigger, SplitText
+* **Routing:** React Router DOM
+
+---
+
+## 🏗️ Technical Highlights & Code Showcases
+
+### 1. Seamless Multi-Phase Scroll Triggering
+To prevent property cross-contamination and the notorious "shrinking single dot" scale bug during component loading, the intro landing sequence and scroll-fade exit are isolated into a single controlled lifecycle handoff:
